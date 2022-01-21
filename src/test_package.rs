@@ -1,5 +1,4 @@
-use std::io;
-pub fn test() -> i32{
+pub fn test() ->i32{
     let x = 5;
     let x =x+1 ;
     {
