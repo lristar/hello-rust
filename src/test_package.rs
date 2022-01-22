@@ -1,13 +1,13 @@
-pub fn test() ->i32{
+pub fn test() -> i32 {
     let x = 5;
-    let x =x+1 ;
+    let x = x + 1;
     {
-        let x=x *2;
+        let x = x * 2;
     }
-    return x
-    }
+    return x;
+}
 
-pub fn testif() ->bool{
+pub fn testif() -> bool {
     let mut a = 5;
     return if a > 10 {
         println!("big");
@@ -15,15 +15,13 @@ pub fn testif() ->bool{
     } else {
         println!("min");
         false
-    }
+    };
 }
 
-pub fn testwhile()->i32{
-     let mut result=0;
+pub fn testwhile() -> i32 {
+    let mut result = 0;
     for i in 0..100 {
         result = i + result;
     }
     return result;
 }
-
-
