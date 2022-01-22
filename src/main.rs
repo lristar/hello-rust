@@ -1,25 +1,10 @@
 extern crate rand;
-pub mod struct_test;
-pub mod test_package;
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
-pub mod test_heap_stack;
-
-pub mod types_test;
-
 const NUM: u32 = 10;
 
-fn main() {
-    test_package::test_for_rev();
-    test_heap_stack::test_string_copy();
-    let s = String::from("hello world");
-    let one = test_heap_stack::first_word(&s);
-    println!("one is :{}", one);
-
-    println!("-------------");
-    let user = struct_test::create_user();
-}
+fn main() {}
 
 // 测试loop循环，match的匹配实现
 fn test() {

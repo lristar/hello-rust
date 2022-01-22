@@ -1,7 +1,6 @@
-pub use rand::Rng;
-
-pub use std::cmp::Ordering;
-pub use std::io;
+use rand::Rng;
+use std::cmp::Ordering;
+use std::io;
 
 #[test]
 #[should_panic(expected = "assertion failed")]
@@ -32,7 +31,9 @@ pub fn test_ordering() {
     println!("Please input your guess.");
     let secret_number = rand::thread_rng().gen_range(1, 101);
     let mut guess = String::new();
-    io::stdin().read_line(&mut guess).expect("Failed to read line");
+    io::stdin()
+        .read_line(&mut guess)
+        .expect("Failed to read line");
     let guess: u32 = guess.trim().parse().expect("Please type a number!");
     println!("You guessed: {}", guess);
     match guess.cmp(&secret_number) {
