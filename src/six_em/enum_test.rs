@@ -23,10 +23,6 @@ enum Option<T> {
     None,
 }
 
-//impl Option<T>{
-//    fn
-//}
-
 pub fn test_enum() {
     let four = IpAddr::V4(127, 0, 0, 1);
     let six = IpAddr::V6(6);
