@@ -19,12 +19,17 @@ impl HM {
 
 fn test_add_value() -> HM {
     let mut hm = HashMap::new();
+    // 插值 ,如果key一样的，值不一样会更新值
     hm.insert(13 as i32, "13".to_string());
     hm.insert(12 as i32, "12".to_string());
+    // 如果存在key,则不插入
+    hm.entry(12 as i32).or_insert("15".to_string());
     return HM { h: hm };
 }
 fn test_del_value() {}
 
+// 不过为了更高的安全性值得付出一些性能的代价。如果性能监测显示此哈希函数非常慢，以致于你无法接受，
+// 你可以指定一个不同的 hasher 来切换为其它函数。hasher 是一个实现了 BuildHasher trait 的类型
 #[test]
 fn test_hash_map() {
     let hm = test_add_value();
