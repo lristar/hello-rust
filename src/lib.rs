@@ -1,5 +1,6 @@
 extern crate rand;
 pub mod eight_collector;
+pub mod eleven_autotest;
 pub mod five_struct;
 pub mod four_owner;
 pub mod leetcode_test;

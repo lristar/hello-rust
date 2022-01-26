@@ -38,6 +38,10 @@ impl<T, U> Point<T, U> {
         }
     }
 }
+// fn some_function<T, U>(t: T, u: U) -> i32  // 可以用where 减少fn的bound定义
+//     where T: Display + Clone,
+//           U: Clone + Debug
+// {}
 
 //我们可以使用泛型来编写不重复的代码，而 Rust 将会为每一个实例编译其特定类型的代码。这意味着在使用泛型时没有运行时开销；
 //当代码运行，它的执行效率就跟好像手写每个具体定义的重复代码一样。这个单态化过程正是 Rust 泛型在运行时极其高效的原因。
