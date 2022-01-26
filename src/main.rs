@@ -4,7 +4,9 @@ use std::cmp::Ordering;
 use std::io;
 const NUM: u32 = 10;
 
-fn main() {}
+fn main() {
+    panic!("crash and burn");
+}
 
 // 测试loop循环，match的匹配实现
 fn test() {

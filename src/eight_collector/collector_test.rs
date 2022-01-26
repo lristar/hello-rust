@@ -3,7 +3,7 @@ fn test_vector() {
     //第一种创建方式
     let mut v: Vec<i32> = Vec::new();
     //第二种创建方式
-    let mut v1 = vec![1, 2, 3];
+    let  v1 = vec![1, 2, 3];
     v.push(5);
     v.push(6); // push 推数据进去
 

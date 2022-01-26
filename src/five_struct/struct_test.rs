@@ -31,7 +31,7 @@ pub fn create_user() -> User {
     };
     // 这里必须保证user1是mut ，方法set_username内有用self,所以可以用user1.set_username
     user1 = user1.set_username(String::from("lzy"));
-    let mut user2 = User {
+    let user2 = User {
         username: user1.username,
         email: user1.email,
         sign_in_count: 0,
