@@ -1,5 +1,4 @@
 extern crate rand;
-
 pub mod eight_collector;
 pub mod five_struct;
 pub mod four_owner;
