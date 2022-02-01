@@ -8,3 +8,4 @@ pub mod nine_error;
 pub mod six_em;
 pub mod ten_genericity_trait_;
 pub mod two_three_example;
+pub mod twelve_cmd;
