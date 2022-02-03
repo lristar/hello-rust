@@ -7,3 +7,11 @@ edition = "2021"
 
 [dependencies]
 rand = "0.7.0"
+
+# 设置编译时优化代码的等级，等级越高优化的时间越长
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
+

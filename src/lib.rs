@@ -10,3 +10,5 @@ pub mod ten_genericity_trait_;
 pub mod two_three_example;
 pub mod twelve_cmd;
 pub mod thirteen_iters;
+pub mod fifteen_smart_point;
+pub mod sixteen_thread;
