@@ -1,4 +1,4 @@
-use std::env::{self, VarError};
+use std::{env::{self, VarError}, ptr::NonNull};
 
 pub struct Config {
     pub query: String,
@@ -17,23 +17,23 @@ fn env_vars(env_name:String) -> Result<String, VarError> {
 #[test]
 fn test_env_vars(){
     let content = env_vars("GOPROXY".to_string());
-    // match content {
-    //     Ok(c) => {
-    //       println!("content is {}",c);
-    //     },
-    //     Err(err) => {
-    //         println!("err is {}",err)
-    //     },
-    // }
-  //  let c =  content.map_or_else(default, f);
-  //   println!("c is {}",c)
-    let k = 21;
+    match content {
+        Ok(c) => {
+          println!("content is {}",c);
+        },
+        Err(err) => {
+            println!("err is {}",err)
+        },
+    }
+//    let c =  content.map_err(|op| op.to_string());
+//     println!("c is {:#?}",c)
+//     let k = 21;
 
-let x : Result<_, &str> = Ok("foo");
-assert_eq!(x.map_or_else(|e| k * 2, |v| v.len()), 3);
-println!("--------");
-let x : Result<&str, _> = Err("bar");
-assert_eq!(x.map_or_else(|e| k * 2, |v| v.len()), 42);
+// let x : Result<_, &str> = Ok("foo");
+// assert_eq!(x.map_or_else(|e| k * 2, |v| v.len()), 3);
+// println!("--------");
+// let x : Result<&str, _> = Err("bar");
+// assert_eq!(x.map_or_else(|e| k * 2, |v| v.len()), 42);
 
 }
 

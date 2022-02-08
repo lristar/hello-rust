@@ -36,7 +36,6 @@ fn test_move() {
 #[test]
 fn test_channel() {
     let (tx, rx) = mpsc::channel();
-
     let t1 = thread::spawn(move || {
         let vals = vec![
             String::from("hi"),

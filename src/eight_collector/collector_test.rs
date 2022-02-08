@@ -30,7 +30,6 @@ fn test_string() {
     // 两种方式创建字符串
     let s = "initial contents".to_string();
     let s = String::from("initial contents");
-
     // 以下是字符串的方法
     //    println!("answer:{:#?}", answer);
 }

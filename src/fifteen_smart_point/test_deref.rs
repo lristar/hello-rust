@@ -1,7 +1,8 @@
 #[test]
 fn test_deref_first() {
   let x = 5;
-  let y = &x;
+  // let y = &x;
+  let ref y = x;
 
   assert_eq!(5, x);
   // assert_eq!(5, y);

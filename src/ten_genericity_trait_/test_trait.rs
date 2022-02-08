@@ -27,6 +27,7 @@ pub trait Display {
     fn show(&self) -> String;
 }
 
+#[derive(Debug)]
 pub struct Tweet {
     pub username: String,
     pub content: String,
@@ -42,7 +43,7 @@ impl Summary for Tweet {
     fn summarize_author(&self) -> String {
         format!("{}: {}", self.username, self.content)
     }
-}
+}   
 
 impl Display for Tweet {
     fn show(&self) -> String {
