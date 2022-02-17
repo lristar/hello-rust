@@ -42,7 +42,6 @@ pub fn testloop() {
             }
             remaining -= 1;
         }
-
         count += 1;
     }
     println!("End count = {}", count);

@@ -39,6 +39,5 @@ pub fn first_word(s: &String) -> &str {
             return &s[0..i];
         }
     }
-
     &s[..]
 }
