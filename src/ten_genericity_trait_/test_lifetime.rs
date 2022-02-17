@@ -9,6 +9,7 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     }
 }
 
+const  s: &'static str = "I have a static lifetime.";
 #[test]
 fn test_lifetime() {
     let string1 = String::from("long string is long");
@@ -27,5 +28,5 @@ fn test_lifetime() {
     // println!("The longest string is {}", result);
     // 这里有一种特殊的生命周期值得讨论：'static，其生命周期能够存活于整个程序期间。
     // 所有的字符串字面值都拥有 'static 生命周期，我们也可以选择像下面这样标注出来。
-    let s: &'static str = "I have a static lifetime.";
+        println!("lifetime is {}",s);
 }

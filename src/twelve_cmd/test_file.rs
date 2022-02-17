@@ -6,8 +6,8 @@ fn test_read_file() {
     // --snip--
     println!("In file {}", "hello.txt");
 
-    let contents = fs::read_to_string("lzyfile.txt".to_string())
-        .expect("Something went wrong reading the file");
+    let contents = fs::read_to_string("hello.txt".to_string())
+        .expect("hello11111");
  // 一行一行的走
     for v in contents.lines() {
         println!("一行");

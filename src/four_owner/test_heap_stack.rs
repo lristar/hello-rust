@@ -41,3 +41,10 @@ pub fn first_word(s: &String) -> &str {
     }
     &s[..]
 }
+
+#[test]
+fn test_slice(){
+      let s = String::from("hello");
+      let s1 =  first_word(&s);
+      println!("string is  {}",s1);
+}
