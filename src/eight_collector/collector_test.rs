@@ -6,7 +6,11 @@ fn test_vector() {
     let  v1 = vec![1, 2, 3];
     v.push(5);
     v.push(6); // push 推数据进去
-
+    let  v2:[i32;5]=[0;5];
+    println!("v2 is :{:#?}",v2);
+    let v3:[i32;5]=[1,2,3,4,5];
+    // can use slice 
+    println!("v3 is :{:#?}",&v3[1..3]);
     println!("v :2{:#?}", v.get(1)); //拿数据出来 不会删除拿出来的数据
     println!("v :2{:#?}", v.get(1));
     // vector 只能储存相同类型的值。这是很不方便的；绝对会有需要储存一系列不同类型的值的用例。

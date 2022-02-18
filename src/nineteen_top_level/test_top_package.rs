@@ -9,3 +9,37 @@ fn test_top_package(){
     let b= a(16);
     println!("b is {}",b);
 }
+
+struct Sheep {}
+struct Cow {}
+
+trait Animal {
+  fn noise(&self ) -> & 'static str ;
+}
+
+impl Animal for Sheep {
+    fn noise(&self ) -> & 'static str  {
+        "sheep mie mie mie"
+    }
+}
+
+impl Animal for Cow {
+    fn noise(&self ) -> & 'static str  {
+        "nu nu nu nu"
+    }
+}
+
+fn random_animal(random:i32) -> Box<dyn Animal>{
+   if random >10 {
+    return  Box::new(Sheep{});
+   } else {
+    return  Box::new(Cow{});
+   }
+}
+
+#[test]
+fn test_randonAnimal(){
+        let num = 15;
+       let animal =  random_animal(num);
+       println!("animal is {}",animal.noise())
+}

@@ -77,3 +77,20 @@ fn test_trait() {
     // notify(tweet);
     notify1(tweet);
 }
+
+// 不可复制的类型。
+struct Empty;
+struct Null;
+
+trait DoubleDrop<T,U> {
+    // 定义一个调用者的方法，接受一个额外的参数 `T`，但不对它做任何事。
+    fn double_drop(self, _: T);
+}
+
+// 
+impl<T,U,X>  DoubleDrop<T,X>  for U{
+    fn double_drop(self, _: T) {
+        
+    }
+}
+
