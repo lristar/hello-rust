@@ -4,6 +4,10 @@ fn test_vector() {
     let mut v: Vec<i32> = Vec::new();
     //第二种创建方式
     let  v1 = vec![1, 2, 3];
+    // 第三种创建方式
+    let v2:[i32;5] =[1,2,3,4,5];
+    // 第四种创建方式
+    let v3:[i32;5]=[0;5];  // 这个设置默认值五个0
     v.push(5);
     v.push(6); // push 推数据进去
 

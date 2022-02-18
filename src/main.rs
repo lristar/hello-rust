@@ -1,11 +1,13 @@
 extern crate rand;
+use hello_cargo::webserver::easy_one_server;
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
 const NUM: u32 = 10;
 
-fn main() {
-    panic!("crash and burn");
+
+fn main()  {
+    let res = easy_one_server::easy_one_server();
 }
 
 // 测试loop循环，match的匹配实现
