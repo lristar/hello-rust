@@ -81,3 +81,19 @@ fn calling_next_directly() {
     assert_eq!(counter.next(), Some(5));
     assert_eq!(counter.next(), None);
 }
+
+#[test]
+fn test_iter(){
+    let ahu =  vec![1,2,3,4,5,6];
+//    let ahu2 = ahu.iter().filter(|&x| x %2  ==0);
+//     ahu2.for_each(|i|{println!("x is {}",i)});
+
+// filter
+let a:Vec<_>= ahu.iter().filter(|&x| x %2 ==0).collect();
+for ele in a {
+        println!("a is {}",*ele);
+}
+//它可以判断迭代器内的元素是否存在满足某个条件的元素。返回值是布尔类型
+ let is_true = ahu.iter().any(|&x|x  ==0);
+ println!("isTrue is {}",is_true);
+}

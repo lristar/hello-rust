@@ -95,3 +95,40 @@ fn call_with_different_values() {
     
     assert_eq!(v2, 2);
 }
+
+#[test]
+fn test_guard_match(){
+    let pair = (2, -2);
+    let ma = |x:(i32,i32)|  {
+        match x {
+            (a,b) if a >b => {
+                println!("a gt b");
+            },
+            (a,b) if a <b => {
+                println!("a lt b");
+            },
+            (a,b) if a ==b => {
+                println!("a eq b");
+            },
+            _ =>{
+                println!("None");
+            }
+        }
+    };
+    ma((2,2));
+}
+
+
+// test@
+#[test]
+fn test_match_other(){
+    let age = 15 ;
+
+    match age{
+        0 => println!("is 0"),
+        n@ 1..=12 => println!("{}",n),
+        n@ 13..=19 =>println!("{}",n),
+        _ => println!("None")
+    }
+}
+
