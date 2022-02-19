@@ -107,17 +107,17 @@ fn select_fn(x: i8) -> i8 {
 pub fn test_enum() {
     let four = IpAddr::V4(127, 0, 0, 1);
     let six = IpAddr::V6(6);
-    if let IpAddr::V4(a,b,c,d) =four  {
-        println!("a is {} :",a);
-        println!("a is {}:",b);
-        println!("a is {}:",c);
-        println!("a is {}:",d);
+    if let IpAddr::V4(a, b, c, d) = four {
+        println!("a is {} :", a);
+        println!("a is {}:", b);
+        println!("a is {}:", c);
+        println!("a is {}:", d);
     }
     println!("four is{:#?}", x = four);
     println!("{}", six.get_num());
     let op = Option::Some("12334");
     dbg!(op);
-    let aa = crate::five_struct::struct_test::create_user();
+    let aa = crate::test::five_struct::struct_test::create_user();
 }
 
 #[test]
